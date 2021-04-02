@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Campo Minado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1 class="titulo-jogo">Campo Minado</h1>
+    <div class="area-menu-inicial">
+        <div id="area-menu-inicial">
+            <div class="form-group">
+                <label for="nivel">Nível: </label>
+                <select id="nivel" class="form-control">
+                    <option value="FACIL">Fácil</option>
+                    <option value="MEDIO" selected="selected">Médio</option>
+                    <option value="DIFICIL">Difícil</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="vidas">Vidas: </label>
+                <select id="vidas" class="form-control">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cor">Cor: </label>
+                <select id="cor" class="form-control">
+                    <option value="azul" selected="selected">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="laranja">Laranja</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="imagem-fundo">Imagem de fundo (link): </label>
+                <input type="text" id='imagem-fundo' class="form-control">
+            </div>
+            <button id="botao-iniciar-jogo" class="btn btn-success" onclick="iniciarJogo()">
+                Iniciar jogo
+            </button>
+            <button id="botao-continuar" class="btn btn-secondary" disabled onclick="continuarJogo()">
+                Continuar jogo
+            </button>
+        </div>
+    </div>
+    <div id="area-jogo" class="esconder">
+        <div id="espaco-tabuleiro"></div>
+        <div class="area-infos-jogo">
+            <button id="botao-salvar" class="btn btn-success area-infos-jogo-itens" onclick="salvarJogo()"></button>
+            <button id="botao-reiniciar" class="btn btn-warning area-infos-jogo-itens" onclick="reiniciarJogo()">Reiniciar jogo</button>
+            <button id="botao-desistir" class="btn btn-danger area-infos-jogo-itens" onclick="desistir()">Desistir</button>
+            <div id="area-vidas-restantes" class="area-infos-jogo-itens">
+            </div>
+            <div id="area-posicoes-restantes" class="area-infos-jogo-itens">
+            </div>
+            <div id="area-dicas" class="area-infos-jogo-itens">
+                <span id="contagem-dicas"></span>
+                <button id="botao-dicas" class="btn btn-info" onclick="darDica()">Dica</button>
+            </div>
+            <div id="area-tempo" class="area-infos-jogo-itens">
+                <div id="contador-tempo">
+                </div>
+                <div id="recorde-tempo">
+                </div>
+            </div>
+        </div>
+        <div id="aviso-resultado">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+body {
+    background-color: #DCDCDC;
+    margin: 20px;
+    background-blend-mode: overlay;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:100vh;
+}
+
+.area-menu-inicial {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-jogo {
+    font-family: "Comic Sans MS";
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+}
+
+#area-jogo {
+    display: flex;
+    justify-content: center;
+}
+
+.area-infos-jogo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.area-infos-jogo-itens {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.esconder {
+    display: none !important;
+}
+
+.celula {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-color: #DCDCDC;
+}
+
+.celula-fechada:hover {
+    opacity: 60%;
+}
+
+.imagem-bomba {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.azul {
+    background-color: blue;
+    border-style: solid;
+    border-color: #ffBC00;
+}
+
+.vermelho {
+    background-color: #D22118;
+    border-style: solid;
+    border-color: #00CC00;
+}
+
+.vermelho-aviso {
+    background-color: #D22118;
+}
+
+.verde {
+    background-color: green;
+    border-style: solid;
+    border-color: red;
+}
+
+.verde-aviso {
+    background-color: green;
+}
+
+.laranja {
+    background-color: orange;
+    border-style: solid;
+    border-color: #01939A;
+}
+
+#aviso-resultado {
+    position: fixed;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
